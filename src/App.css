@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+.main{
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row{
+  display: flex;
+}
+
+.hide{
+  display: none;
+}
+
+ /* ======= Game Container ====== */
+.game-cont{
+  gap: 1.3rem;
+  width: 100%;
+}
+
+
+ /* ====== Navbar ====== */
+ .header{
+  padding-top: .6rem;
+ }
+
+.nav_items{
+  margin-left: auto;
+  align-items: center;
+  gap: .8rem;
+}
+
+.nav_item{
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  background-color: hsl(0, 0%, 92%);
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+}
+
+.nav_link_icon{
+  font-size: 1rem;
+  color: darkslategray;
+  transition: all .2s;
+}
+
+.nav_item:hover .nav_link_icon{
+  color: rgb(70, 199, 70);
+}
+
+.nav_item:hover{
+  background-color: rgb(203, 240, 203);
+}
+
+ /* ====== Gameboard ===== */
+.game-board{
+  justify-content: center;
+  margin-bottom: .4rem;
+}
+
+.word_row{
+  gap: .3rem;
+  justify-content: center;
+  margin-bottom: .3rem;
+}
+
+.word_tile{
+  width: 58px;
+  height: 58px;
+  color: hsl(0, 0%, 25%);
+  font-size: 1.7rem;
+  font-weight: 700;
+  border: 2px solid hsl(0, 0%, 76%);
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-default{
+  background-color: white;
+}
+
+.bg-green{
+  background: rgb(65, 170, 65);
+  color: hsl(0, 0%, 92%);
+  border: 2px solid transparent;
+}
+
+.bg-yellow{
+  background: rgb(193, 193, 30);
+  color: hsl(0, 0%, 92%);
+  border: 2px solid transparent;
+}
+
+ /* ====== KEYBOAD ====== */
+.keyboard{
+  width: 100%;
+}
+
+.keys-row{
+  display: flex;
+  justify-content: stretch;
+}
+
+.key-btn{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 4px solid transparent;
+  border-radius: 4px;
+  margin: 2.4px;
+  color: darkslategray;
+  background-color: hsl(0, 0%, 85%);
+  min-height: 42px;
+  transition: all .3s;
+}
+
+.key_bksp{
+  font-size: 1.6rem;
+}
+
+.key-btn:hover{
+  background-color: hsl(0, 0%, 64%);
+}
+
+.keys_wide{
+  flex: 2 1;
+}
+
+ /* ====== Settings ===== */
+.settings-cont{
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 38rem;
+  font-family: inherit;
+  border-radius: 12px;
+  padding: .1rem;
+  gap: 1.5rem;
+  background-color: aliceblue;
+  transition: all .3s ease;
+  border: 1px solid rgb(39, 159, 39);
+  box-shadow: 0 0 8px 4px rgb(39, 159, 39);;
+}
+
+.settings-cont>div{
+  width: 100%;
+}
+
+.settings-cont>hr{
+  width: 95%;
+  margin-left: 1rem;
+}
+
+.sett-header{
+  justify-content: space-between;
+  background-color: hsl(224, 100%, 95%);
+  padding: .4rem 0 .4rem 0;
+  border-radius: 8px;
+}
+
+.sett-header>h3, .dm_des{
+  margin-left: 1rem;
+}
+
+.sett-close{
+  cursor: pointer;
+  color: hsl(0, 0%, 54%);
+  font-size: 1.2rem;
+  margin: .3rem 2rem 0 0;
+}
+
+.sett-close:hover{
+  color: rgb(242, 43, 43)
+}
+
+.no-of-letters{
+  align-items: center;
+  gap: .7rem;
+}
+
+.select_no{
+  gap: .5rem;
+}
+
+.btn-no{
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem .8rem;
+  border-radius: 10px;
+  background-color: hsl(224, 100%, 95%);
+  transition: all 200ms ease;
+}
+
+.btn-no_active{
+  background: rgb(65, 170, 65);
+  font-weight: 700;
+  color: aliceblue;
+}
+
+.dm{
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.btn-toggle{
+  margin: .5rem 2rem 0 0;
+}
+
+@media screen and (max-width: 1200px){
+  .settings-cont{
+    left: 10%;
+  }
+}
